@@ -1,0 +1,4 @@
+[run]
+omit =
+    # omit all init files
+    */__init__.py

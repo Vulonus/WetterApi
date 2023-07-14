@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+lint = "bash -c 'pylint --rcfile=.pylintrc --output-format=colorized app/**/*.py'"
+test = "bash -c 'coverage run --source=./app -m pytest -v ./tests/unit && coverage report -m'"
+
+[packages]
+uvicorn = "*"
+fastapi = "*"
+requests = "*"
+boto3 = "*"
+botocore = "*"
+httpx = "*"
+pydantic = "*"
+pytz = "*"
+starlette = "*"
+fastapi-cache2 = "*"
+pyjwt = "*"
+
+[dev-packages]
+mockito = "*"
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+pylint = "*"
+pylint-pytest = "*"
+pylint-pydantic = "*"
+PyHamcrest = "*"
+parameterized = "*"
+
+[requires]
+python_version = "3.11"
